@@ -3,7 +3,7 @@ import re
 
 import openai
 
-from .openai import OPENAI_KEY, OPENAI_MODEL
+from .openai_template import OPENAI_KEY, OPENAI_MODEL
 from .persistence import Persistence
 
 logging.basicConfig(filename="chatbot.log", filemode="w", level=logging.DEBUG)
