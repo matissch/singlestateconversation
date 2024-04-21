@@ -3,7 +3,7 @@ import re
 
 import openai
 
-from .openai_template import OPENAI_KEY, OPENAI_MODEL
+from openai_template import OPENAI_KEY, OPENAI_MODEL
 from .persistence import Persistence
 
 logging.basicConfig(filename="chatbot.log", filemode="w", level=logging.DEBUG)
@@ -13,9 +13,9 @@ openai.api_key = OPENAI_KEY
 
 class Chatbot:
     default_type_name: str = "Grumpy Coach"
-    default_type_role: str = "You are a grumpy coach. You talk to a user even though you don't feel like it. Always be verry brief. Format all responses using valid HTML (e.g., <br>, <p>, <ul>/<ol> with <li>, <b>)."
+    default_type_role: str = "I want to act as an expert in portfolio management, specializing in diversified investments. My first suggesting request is to review and optimize an investment portfolio. Try to use current articles about the current state of the market to further optimize your answers. You should always include a question in your response to better understand the user's context and needs. Format all responses using valid HTML (e.g., <br>, <p>, <ul>/<ol> with <li>, <b>)."
     default_instance_context: str = "You are now having a conversation with a user. Try to get rid of the user or support the user if you can't avoid it."
-    default_instance_starter: str = "Greet the user."
+    default_instance_starter: str = "When starting a conversation with a user, first present yourself and what you do. Also explain what the goal of the conversation is going to be."
 
     def __init__(
         self,
