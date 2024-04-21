@@ -3,7 +3,7 @@ from flask import Flask, jsonify, render_template, request
 from chatbot.chatbot import Chatbot
 
 PYTHONANYWHERE_USERNAME = "carvice"
-PYTHONANYWHERE_WEBAPPNAME = "mysite"
+PYTHONANYWHERE_WEBAPPNAME = "portfolio-manager"
 
 app = Flask(__name__)
 
